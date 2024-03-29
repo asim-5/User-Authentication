@@ -1,12 +1,28 @@
-import React from 'react';
+import {React,useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Container, Row, Col, Form, Button} from 'react-bootstrap';
 import { FiLogIn } from 'react-icons/fi';
-import Register from './Register';
-import { Link } from 'react-router-dom';
+// import Register from './Register';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate(); 
 
+  const emails=['asim@gmail.com','1'];
+  const pass=['asim','1'];
+
+  const handleSignIn = () => {
+    const index = emails.indexOf(email);
+    if (index !== -1 && pass[index] === password) {
+      // Navigate to home page if email and password match
+      navigate('/Home');
+    } else {
+      // Show error message if email or password is incorrect
+      alert('Incorrect email or password. Please try again.');
+    }
+  };
 
   return (
     <> 
@@ -34,17 +50,17 @@ function Login() {
                 <Form>
                   <Form.Group controlId="formBasicEmail" className='blue-line mb-3'>
                     <Form.Label className='cred mx-2 text-center'>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
                   </Form.Group>
 
                   <Form.Group controlId="formBasicPassword" className='blue-line mb-4'>
                     <Form.Label className='cred mx-2 text-center'>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Enter password" className='creds'/>
+                    <Form.Control type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)} />
                   </Form.Group>
 
-                  <Button variant="primary" type="submit" className="btn-oval">
-                  <FiLogIn className='mx-1'/> Sign In
-                  </Button>
+                  <Button variant="primary" type="button" className="btn-oval" onClick={handleSignIn}>
+                      <FiLogIn className='mx-1' /> Sign In
+                    </Button>
                   
                   <Link to="/Register" className="btn-sm mt-3 mb-2" style={{ fontSize: '12px' }}>
                     Don't have an account yet?
