@@ -12,7 +12,8 @@ function App() {
       <Routes>
         <Route  path="/" element={<Login />}  />
         <Route  path="/Register"  element={<Register />} />        
-        <Route  path="/Home"  element={<Home />} />        
+        <Route  path="/Home"  element={<Home />} />  
+        <Route  path="/Login" element={<Login />}  />      
       </Routes> 
     </Router>
     </>
