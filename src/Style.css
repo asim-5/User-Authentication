@@ -142,6 +142,7 @@ label {
   color: #333;
 }
 
+input[ type='password'],
 input[type="text"],
 input[type="email"],
 textarea {
@@ -184,6 +185,12 @@ align-items: center;
   width: 48%; /* Adjust half width */
   display: inline-block;
 }
+.half2 {
+  width: 48%; /* Adjust half width */
+  display: inline-block;
+  margin-left: 0.5rem;
+
+}
 
 .half label {
   display: block;
@@ -210,4 +217,25 @@ align-items: center;
   font-weight: 100 !important;
   font-family: 'Montserrat';
   font-size: 15 !important;
+}
+.quu{
+  color: #afbec4;
+  bottom: 20px; 
+  position: absolute;
+  left: 120px;
+}
+@media (max-width: 767px) {
+  .half {
+    width: 104%; /* Adjust half width */
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  .half2 {
+    width: 100%; /* Adjust half width */
+    display: inline-block;
+    margin-left: 0;
+  }
+  .quu{
+    display: none;
+  }
 }

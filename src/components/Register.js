@@ -13,7 +13,7 @@ function Register() {
        <h2 className="welc text-center mb-3 " style={{ color: 'white' }}>Register to our network</h2>
        <p className="querys " >Provide details in order for us to register you to our network
        </p>
-       <p className="qu text-center">
+       <p className="quu text-center">
        For any queries contact us at maam@gmail.com
        </p>
      </div>
@@ -29,7 +29,7 @@ function Register() {
                 <label htmlFor="firstName">First Name</label>
                 <input type="text" id="firstName" name="firstName" />
                 </div>
-                <div className="half mx-2">
+                <div className="half2">
                 <label htmlFor="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" />
                 </div>
@@ -39,15 +39,15 @@ function Register() {
             <input type="email" id="email" name="email" required />
             </div>
             <div className="form-group">
-            <label htmlFor="country">Password</label>
-            <input type="text" id="country" name="country" required />
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" name="pasword" required />
             </div>
             <div className="form-group">
             <label htmlFor="explanation">Address</label>
             <textarea id="explanation" name="explanation" rows="4" required></textarea>
             </div>
             <div className="form-group">
-            <button type="submit" className="submit-button">Submit</button>
+            <button type="submit" className="submit-button">Sign up</button>
             </div>
         </form>
         <div className="form-image">
